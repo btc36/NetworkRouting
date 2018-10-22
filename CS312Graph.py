@@ -25,6 +25,8 @@ class CS312GraphNode:
     def getQueueIndex(self):
         return self.queue_index
 
+    def setQueueIndex(self,index):
+        self.queue_index = index
     def addEdge( self, neighborNode, weight ):
         self.neighbors.append( CS312GraphEdge(self,neighborNode,weight) )
 
