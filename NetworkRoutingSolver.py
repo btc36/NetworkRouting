@@ -97,7 +97,7 @@ class NetworkRoutingSolver:
         for node in nodes:
             node.changeDistance(float("inf"))
             node.changePrev(None)
-            if node.getId != src:
+            if node.getId() != src:
                 queue.append(node)
                 node.setQueueIndex(idx)
             else:
@@ -105,6 +105,7 @@ class NetworkRoutingSolver:
                 src.setQueueIndex(0)
             idx = idx + 1
         queue.insert(0, src)
+        x = "TEST"
         return queue
 
     #Order doesn't matter, so I don't need this funcion
